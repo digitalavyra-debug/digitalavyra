@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<!-- saved from url=(0053)file:///C:/Users/vishw/Downloads/avyra-digital_1.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Avyra Digital — End-to-End Digital Solutions</title>
+<link rel="preconnect" href="https://fonts.googleapis.com/">
+<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+<link href="./Avyra Digital — End-to-End Digital Solutions_files/css2" rel="stylesheet">
+<script src="./Avyra Digital — End-to-End Digital Solutions_files/email.min.js.download"></script>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --teal:#1D9E75;--tl:#5DCAA5;--td:#085041;
+  --ink:#060d0a;--ink2:#0d1a14;--ink3:#132018;
+  --mist:#8aab97;--cream:#dff0e8;--white:#f0f8f3;
+  --fd:'Fraunces',Georgia,serif;--fb:'Geist',system-ui,sans-serif;
+  --r8:8px;--r12:12px;--r16:16px;--r24:24px;
+}
+html{scroll-behavior:smooth}
+body{background:var(--ink);color:var(--cream);font-family:var(--fb);overflow-x:hidden;line-height:1.6}
+::selection{background:var(--teal);color:#fff}
+::-webkit-scrollbar{width:3px}
+::-webkit-scrollbar-track{background:var(--ink)}
+::-webkit-scrollbar-thumb{background:var(--td);border-radius:2px}
+
+/* NAV */
+.nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1rem 2.5rem;transition:all .4s}
+.nav.scrolled{background:rgba(6,13,10,.88);backdrop-filter:blur(22px) saturate(1.4);-webkit-backdrop-filter:blur(22px) saturate(1.4);border-bottom:1px solid rgba(29,158,117,.1)}
+.nav-logo{display:flex;align-items:center;gap:.65rem;text-decoration:none}
+.nav-wordmark{font-family:var(--fb);font-size:1.2rem;font-weight:600;color:var(--white);letter-spacing:-.02em}
+.nav-wordmark span{color:var(--tl)}
+.nav-links{display:flex;gap:2.25rem;list-style:none}
+.nav-links a{color:var(--mist);text-decoration:none;font-size:.85rem;font-weight:400;transition:color .2s}
+.nav-links a:hover{color:var(--white)}
+.nav-cta{background:var(--teal);color:#fff;border:none;padding:.6rem 1.35rem;border-radius:var(--r8);font-family:var(--fb);font-size:.85rem;font-weight:500;cursor:pointer;transition:all .2s}
+.nav-cta:hover{background:var(--tl);transform:translateY(-1px);box-shadow:0 6px 20px rgba(29,158,117,.35)}
+
+/* HERO */
+.hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding:8rem 2.5rem 5rem;position:relative;overflow:hidden}
+.hero-photo{position:absolute;inset:0;background-image:url('https://images.unsplash.com/photo-1497366216548-37526070297c?w=1800&q=80&auto=format&fit=crop&crop=center');background-size:cover;background-position:center;opacity:.22;filter:saturate(0.3) brightness(0.6)}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(135deg,rgba(6,13,10,.97) 0%,rgba(6,13,10,.78) 45%,rgba(13,26,20,.62) 70%,rgba(6,13,10,.92) 100%)}
+.hero-orb-1{position:absolute;pointer-events:none;top:-18%;left:52%;width:750px;height:750px;border-radius:50%;background:radial-gradient(circle,rgba(29,158,117,.16) 0%,transparent 65%);filter:blur(60px)}
+.hero-orb-2{position:absolute;pointer-events:none;bottom:-12%;left:-8%;width:550px;height:550px;border-radius:50%;background:radial-gradient(circle,rgba(8,80,65,.22) 0%,transparent 65%);filter:blur(60px)}
+.hero-grid{position:absolute;inset:0;pointer-events:none;background-image:linear-gradient(rgba(29,158,117,.032) 1px,transparent 1px),linear-gradient(90deg,rgba(29,158,117,.032) 1px,transparent 1px);background-size:64px 64px;mask-image:radial-gradient(ellipse 85% 75% at 60% 30%,#000 20%,transparent 100%);-webkit-mask-image:radial-gradient(ellipse 85% 75% at 60% 30%,#000 20%,transparent 100%)}
+
+.hero-pill{display:inline-flex;align-items:center;gap:.5rem;background:rgba(29,158,117,.09);border:1px solid rgba(29,158,117,.25);padding:.3rem .9rem;border-radius:999px;margin-bottom:1.75rem;width:fit-content;position:relative;animation:fadeUp .7s ease both}
+.pill-dot{width:6px;height:6px;border-radius:50%;background:var(--tl);animation:breathe 2.2s ease-in-out infinite}
+.hero-pill span{font-size:.75rem;color:var(--tl);font-weight:500;letter-spacing:.05em}
+
+.hero-h1{font-family:var(--fd);font-size:clamp(2.8rem,6vw,5.2rem);font-weight:300;line-height:1.06;color:var(--white);max-width:860px;margin-bottom:1.5rem;position:relative;animation:fadeUp .7s .1s ease both}
+.hero-h1 em{color:var(--tl);font-style:italic}
+
+/* two equal hero value props */
+.hero-props{display:grid;grid-template-columns:1fr 1fr;gap:1.1rem;max-width:760px;margin-bottom:2.5rem;position:relative;animation:fadeUp .7s .2s ease both}
+.hero-prop{background:rgba(13,26,20,.75);border:1px solid rgba(29,158,117,.15);border-radius:var(--r12);padding:1.2rem 1.35rem;backdrop-filter:blur(10px)}
+.hero-prop.accent{border-color:rgba(29,158,117,.35);background:rgba(29,158,117,.07)}
+.hero-prop-icon{font-size:1.35rem;margin-bottom:.5rem}
+.hero-prop h3{font-size:.92rem;font-weight:500;color:var(--white);margin-bottom:.3rem;letter-spacing:-.01em}
+.hero-prop.accent h3{color:var(--tl)}
+.hero-prop p{font-size:.79rem;color:var(--mist);font-weight:300;line-height:1.65}
+
+.hero-actions{display:flex;gap:.85rem;align-items:center;flex-wrap:wrap;position:relative;animation:fadeUp .7s .32s ease both}
+.btn-primary{background:var(--teal);color:#fff;border:none;padding:.82rem 1.9rem;border-radius:var(--r8);font-family:var(--fb);font-size:.9rem;font-weight:500;cursor:pointer;transition:all .2s;display:inline-flex;align-items:center;gap:.45rem}
+.btn-primary:hover{background:var(--tl);transform:translateY(-2px);box-shadow:0 10px 28px rgba(29,158,117,.35)}
+.btn-ghost{background:transparent;color:var(--mist);border:1px solid rgba(138,171,151,.2);padding:.82rem 1.9rem;border-radius:var(--r8);font-family:var(--fb);font-size:.9rem;font-weight:400;cursor:pointer;transition:all .2s}
+.btn-ghost:hover{border-color:var(--teal);color:var(--white)}
+
+.hero-scroll{position:absolute;bottom:2.5rem;left:2.5rem;display:flex;flex-direction:column;align-items:flex-start;gap:.5rem;color:var(--mist);font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;animation:fadeUp .7s .5s ease both}
+.hero-scroll-bar{width:1px;height:48px;background:linear-gradient(to bottom,var(--teal),transparent);animation:grow 2.5s ease-in-out infinite}
+
+/* STATS */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid rgba(29,158,117,.1);border-bottom:1px solid rgba(29,158,117,.1);background:var(--ink2)}
+.stat{padding:2rem 2.25rem;border-right:1px solid rgba(29,158,117,.08)}
+.stat:last-child{border-right:none}
+.stat-n{font-family:var(--fd);font-size:2.4rem;font-weight:300;color:var(--tl);line-height:1;margin-bottom:.4rem}
+.stat-l{font-size:.8rem;color:var(--mist);font-weight:300;line-height:1.5}
+
+/* SECTIONS */
+.section{padding:6.5rem 2.5rem}
+.inner{max-width:1080px;margin:0 auto}
+.tag{font-size:.72rem;font-weight:600;letter-spacing:.18em;color:var(--teal);text-transform:uppercase;margin-bottom:.9rem;display:flex;align-items:center;gap:.5rem}
+.tag::before{content:'';width:18px;height:1px;background:var(--teal)}
+.sh{font-family:var(--fd);font-size:clamp(1.9rem,3.8vw,2.9rem);font-weight:300;line-height:1.15;color:var(--white);margin-bottom:1.1rem}
+.sh em{color:var(--tl);font-style:italic}
+.sb{font-size:.95rem;color:var(--mist);font-weight:300;line-height:1.85;max-width:520px}
+
+/* PHOTO BANNER */
+.photo-banner{position:relative;height:300px;overflow:hidden}
+.photo-banner-img{position:absolute;inset:0;background-size:cover;background-position:center;filter:saturate(0.4) brightness(0.5);transition:transform 8s ease}
+.photo-banner:hover .photo-banner-img{transform:scale(1.04)}
+.photo-banner-overlay{position:absolute;inset:0;background:linear-gradient(to right,rgba(6,13,10,.92) 0%,rgba(6,13,10,.55) 55%,rgba(6,13,10,.88) 100%);display:flex;align-items:center;padding:3rem 4rem}
+.photo-banner-text h2{font-family:var(--fd);font-size:clamp(1.5rem,3vw,2.1rem);font-weight:300;color:var(--white);margin-bottom:.6rem;line-height:1.2}
+.photo-banner-text h2 em{color:var(--tl);font-style:italic}
+.photo-banner-text p{font-size:.875rem;color:var(--mist);font-weight:300;max-width:420px;line-height:1.75}
+
+/* HOW IT WORKS */
+.how{background:var(--ink2)}
+.how-header{margin-bottom:4rem}
+.how-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(29,158,117,.06);border:1px solid rgba(29,158,117,.06);border-radius:var(--r16);overflow:hidden}
+.how-step{background:var(--ink3);padding:2.75rem 2rem;position:relative;overflow:hidden;transition:background .3s}
+.how-step:hover{background:rgba(29,158,117,.05)}
+.step-num{font-family:var(--fd);font-size:5rem;font-weight:300;font-style:italic;color:rgba(29,158,117,.08);line-height:1;position:absolute;top:.5rem;right:1.25rem}
+.step-line{width:32px;height:2px;background:var(--teal);margin-bottom:1.75rem;border-radius:1px}
+.how-step h3{font-size:1.05rem;font-weight:500;color:var(--white);margin-bottom:.7rem;letter-spacing:-.01em}
+.how-step p{font-size:.875rem;color:var(--mist);font-weight:300;line-height:1.75}
+
+/* BENTO */
+.bento{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(29,158,117,.06);border:1px solid rgba(29,158,117,.06);border-radius:var(--r16);overflow:hidden;margin-top:3.5rem}
+.bento-cell{background:var(--ink2);padding:2.25rem 2rem;transition:background .3s;cursor:default;position:relative;overflow:hidden}
+.bento-cell::after{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(29,158,117,.05),transparent 60%);opacity:0;transition:opacity .3s}
+.bento-cell:hover{background:rgba(29,158,117,.04)}
+.bento-cell:hover::after{opacity:1}
+.bento-cell.wide{grid-column:span 2}
+.cell-icon{width:40px;height:40px;border-radius:10px;background:rgba(29,158,117,.09);border:1px solid rgba(29,158,117,.18);display:flex;align-items:center;justify-content:center;margin-bottom:1.35rem;font-size:1rem}
+.bento-cell h3{font-size:1rem;font-weight:500;color:var(--white);margin-bottom:.6rem;letter-spacing:-.01em}
+.bento-cell p{font-size:.84rem;color:var(--mist);font-weight:300;line-height:1.75}
+.cell-tags{display:flex;flex-wrap:wrap;gap:.4rem;margin-top:1.1rem}
+.cell-tag{padding:.2rem .65rem;background:rgba(29,158,117,.1);border-radius:4px;font-size:.7rem;color:var(--tl);font-weight:500}
+
+/* PHOTO SPLIT */
+.photo-split{display:grid;grid-template-columns:1fr 1fr;min-height:400px;overflow:hidden;border-radius:var(--r16);border:1px solid rgba(29,158,117,.08)}
+.photo-split-img{background-size:cover;background-position:center;filter:saturate(0.4) brightness(0.5)}
+.photo-split-content{background:var(--ink2);padding:3.5rem;display:flex;flex-direction:column;justify-content:center}
+.photo-split-content .sh{margin-bottom:1rem}
+.photo-split-content .sb{margin-bottom:2rem}
+
+/* WHY */
+.why{background:var(--ink2)}
+.why-inner{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center}
+.why-panel{background:var(--ink3);border-radius:var(--r24);border:1px solid rgba(29,158,117,.1);padding:2.5rem;aspect-ratio:1/1;position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center}
+.why-panel-glow{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:280px;height:280px;background:radial-gradient(circle,rgba(29,158,117,.12),transparent 65%);pointer-events:none}
+.why-features{display:flex;flex-direction:column;gap:2rem}
+.wf{display:flex;gap:1rem;align-items:flex-start}
+.wf-icon{width:36px;height:36px;border-radius:9px;flex-shrink:0;background:rgba(29,158,117,.09);border:1px solid rgba(29,158,117,.18);display:flex;align-items:center;justify-content:center;margin-top:.1rem}
+.wf-icon svg{width:16px;height:16px;stroke:var(--tl);fill:none;stroke-width:1.75}
+.wf h4{font-size:.95rem;font-weight:500;color:var(--white);margin-bottom:.3rem;letter-spacing:-.01em}
+.wf p{font-size:.845rem;color:var(--mist);font-weight:300;line-height:1.75}
+
+/* OFFER */
+.offer{padding:5.5rem 2.5rem;background:var(--ink);position:relative;overflow:hidden}
+.offer-glow-l{position:absolute;top:-20%;left:-10%;width:500px;height:500px;background:radial-gradient(circle,rgba(29,158,117,.1),transparent 65%);pointer-events:none;filter:blur(40px)}
+.offer-glow-r{position:absolute;bottom:-20%;right:-10%;width:400px;height:400px;background:radial-gradient(circle,rgba(8,80,65,.2),transparent 65%);pointer-events:none;filter:blur(40px)}
+.offer-card{max-width:800px;margin:0 auto;background:var(--ink2);border:1px solid rgba(29,158,117,.22);border-radius:var(--r24);padding:3.5rem;position:relative;overflow:hidden;text-align:center}
+.offer-card::before{content:'';position:absolute;inset:0;border-radius:var(--r24);background:linear-gradient(135deg,rgba(29,158,117,.06) 0%,transparent 50%,rgba(8,80,65,.04) 100%)}
+.offer-badge{display:inline-flex;align-items:center;gap:.5rem;background:rgba(29,158,117,.12);border:1px solid rgba(29,158,117,.3);padding:.35rem 1rem;border-radius:999px;margin-bottom:1.75rem}
+.offer-badge span{font-size:.75rem;color:var(--tl);font-weight:600;letter-spacing:.06em;text-transform:uppercase}
+.offer-card .sh{margin:0 auto 1rem}
+.offer-card .sb{margin:0 auto 2.25rem;max-width:560px}
+.offer-highlight{background:rgba(29,158,117,.08);border:1px solid rgba(29,158,117,.15);border-radius:var(--r12);padding:1.25rem 1.75rem;margin:0 auto 2.25rem;max-width:580px;display:flex;align-items:flex-start;gap:.9rem;text-align:left}
+.offer-highlight-bar{width:3px;flex-shrink:0;background:var(--teal);border-radius:2px;align-self:stretch;min-height:40px}
+.offer-highlight p{font-size:.875rem;color:var(--cream);line-height:1.8;font-weight:300}
+.offer-highlight p strong{color:var(--tl);font-weight:500}
+.offer-perks{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-bottom:2.5rem}
+.offer-perk{background:var(--ink3);border:1px solid rgba(29,158,117,.08);border-radius:var(--r12);padding:1.25rem 1rem;text-align:center}
+.perk-icon{font-size:1.4rem;margin-bottom:.6rem}
+.perk-title{font-size:.82rem;font-weight:500;color:var(--white);margin-bottom:.25rem}
+.perk-sub{font-size:.76rem;color:var(--mist);font-weight:300;line-height:1.5}
+.offer-note{font-size:.78rem;color:var(--mist);margin-top:1.25rem}
+
+/* CONTACT */
+.contact-inner{display:grid;grid-template-columns:1fr 1.1fr;gap:5rem;align-items:start}
+.contact-details{display:flex;flex-direction:column;gap:1.75rem;margin-top:2rem}
+.cd{display:flex;gap:.85rem;align-items:flex-start}
+.cd-icon{width:38px;height:38px;border-radius:9px;flex-shrink:0;background:rgba(29,158,117,.09);border:1px solid rgba(29,158,117,.18);display:flex;align-items:center;justify-content:center;font-size:.95rem}
+.cd h4{font-size:.875rem;font-weight:500;color:var(--white);margin-bottom:.2rem}
+.cd p{font-size:.83rem;color:var(--mist);font-weight:300}
+.cd a{color:var(--tl);text-decoration:none}
+.cd a:hover{text-decoration:underline}
+.form-wrap{background:var(--ink2);border:1px solid rgba(29,158,117,.1);border-radius:var(--r16);padding:2.25rem}
+.form-grid{display:flex;flex-direction:column;gap:1rem}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:.85rem}
+.fg{display:flex;flex-direction:column;gap:.4rem}
+.fg label{font-size:.75rem;font-weight:500;color:var(--mist);letter-spacing:.05em;text-transform:uppercase}
+.fg input,.fg textarea{background:var(--ink3);border:1px solid rgba(138,171,151,.12);border-radius:var(--r8);padding:.72rem 1rem;color:var(--white);font-family:var(--fb);font-size:.875rem;transition:border-color .2s;outline:none;width:100%}
+.fg input:focus,.fg textarea:focus{border-color:var(--teal)}
+.fg input::placeholder,.fg textarea::placeholder{color:rgba(138,171,151,.3)}
+.fg textarea{resize:vertical;min-height:108px}
+.form-hint{font-size:.73rem;color:var(--mist);line-height:1.6;padding:.7rem .9rem;background:rgba(29,158,117,.05);border-radius:var(--r8);border:1px solid rgba(29,158,117,.1)}
+.form-submit{width:100%;background:var(--teal);color:#fff;border:none;padding:.9rem 2rem;border-radius:var(--r8);font-family:var(--fb);font-size:.9rem;font-weight:500;cursor:pointer;transition:all .2s;margin-top:.25rem;display:flex;align-items:center;justify-content:center;gap:.6rem}
+.form-submit:hover{background:var(--tl);transform:translateY(-2px);box-shadow:0 10px 28px rgba(29,158,117,.32)}
+.form-submit:disabled{opacity:.6;cursor:not-allowed;transform:none;box-shadow:none}
+.spinner{width:15px;height:15px;border:2px solid rgba(255,255,255,.3);border-top-color:#fff;border-radius:50%;animation:spin .7s linear infinite;display:none;flex-shrink:0}
+.form-success{text-align:center;padding:3rem 2rem;background:rgba(29,158,117,.05);border-radius:var(--r12)}
+.form-success-icon{font-size:2.5rem;margin-bottom:1rem}
+.form-success h3{font-size:1.1rem;color:var(--tl);margin-bottom:.5rem;font-weight:500}
+.form-success p{font-size:.875rem;color:var(--mist);font-weight:300;line-height:1.75}
+
+/* FOOTER */
+.footer{padding:2.25rem 2.5rem;border-top:1px solid rgba(29,158,117,.09);display:flex;align-items:center;justify-content:space-between;background:var(--ink);flex-wrap:wrap;gap:1.25rem}
+.footer-left{display:flex;align-items:center;gap:.75rem}
+.footer-copy{font-size:.78rem;color:var(--mist)}
+.footer-copy span{color:var(--teal)}
+.footer-links{display:flex;gap:2rem}
+.footer-links a{font-size:.78rem;color:var(--mist);text-decoration:none;transition:color .2s}
+.footer-links a:hover{color:var(--white)}
+
+/* KEYFRAMES */
+@keyframes fadeUp{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:translateY(0)}}
+@keyframes breathe{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.45;transform:scale(1.4)}}
+@keyframes grow{0%,100%{transform:scaleY(1);opacity:1}50%{transform:scaleY(.5);opacity:.5}}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+/* REVEAL */
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .75s ease,transform .75s ease}
+.reveal.show{opacity:1;transform:translateY(0)}
+.reveal-d1{transition-delay:.08s}.reveal-d2{transition-delay:.16s}
+.reveal-d3{transition-delay:.24s}.reveal-d4{transition-delay:.32s}
+
+/* RESPONSIVE */
+@media(max-width:860px){
+  .nav-links{display:none}
+  .hero{padding:7rem 1.5rem 4rem}
+  .hero-props{grid-template-columns:1fr}
+  .stats{grid-template-columns:repeat(2,1fr)}
+  .stat{border-right:none;border-bottom:1px solid rgba(29,158,117,.08)}
+  .how-steps,.bento{grid-template-columns:1fr}
+  .bento-cell.wide{grid-column:span 1}
+  .why-inner,.contact-inner,.photo-split{grid-template-columns:1fr;gap:2.5rem}
+  .photo-split-img{min-height:220px}
+  .photo-banner-overlay{padding:2rem 1.5rem}
+  .offer-perks{grid-template-columns:1fr}
+  .section{padding:4rem 1.5rem}
+  .footer{flex-direction:column;text-align:center}
+  .form-row{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav scrolled" id="nav">
+  <a class="nav-logo" href="#">
+    <svg width="48" height="48" viewBox="0 0 100 100" fill="none">
+      <path d="M18 82 L46 22 L50 22 L22 82 Z" fill="#085041"></path>
+      <path d="M82 82 L54 22 L50 22 L78 82 Z" fill="#1D9E75"></path>
+      <path d="M47 22 L50 22 L53 22 L43 46 L40 46 Z" fill="#5DCAA5"></path>
+      <path d="M25 68 L39 68 L42 60 L28 60 Z" fill="#060d0a"></path>
+      <path d="M75 68 L61 68 L58 60 L72 60 Z" fill="#060d0a"></path>
+      <rect x="14" y="80" width="72" height="3.5" rx="1.75" fill="#1D9E75"></rect>
+      <circle cx="50" cy="24" r="4.5" fill="#1D9E75"></circle>
+      <circle cx="50" cy="24" r="2" fill="#dff0e8"></circle>
+    </svg>
+    <span class="nav-wordmark">Avyra <span>Digital</span></span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#how">How it works</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#why">Why us</a></li>
+    <li><a href="#offer">Free consult</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <button class="nav-cta" onclick="document.getElementById(&#39;contact&#39;).scrollIntoView({behavior:&#39;smooth&#39;})">Get started</button>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-photo"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-grid"></div>
+  <div class="hero-orb-1"></div>
+  <div class="hero-orb-2"></div>
+
+  <div class="hero-pill">
+    <div class="pill-dot"></div>
+    <span>Australian-owned · Launched 2025</span>
+  </div>
+
+  <h1 class="hero-h1">
+    Premium digital work.<br>
+    <em>Without the premium</em><br>
+    price tag.
+  </h1>
+
+  <div class="hero-props">
+    <div class="hero-prop accent">
+      <div class="hero-prop-icon">💸</div>
+      <h3>Affordable global pricing</h3>
+      <p>We source your digital work from skilled global providers and pass every cent of the savings to you — at a fraction of what local agencies charge.</p>
+    </div>
+    <div class="hero-prop">
+      <div class="hero-prop-icon">🤝</div>
+      <h3>Built on genuine trust</h3>
+      <p>Every project is managed end-to-end by Avyra. One contact, transparent quotes, and your interests protected at every step.</p>
+    </div>
+  </div>
+
+  <div class="hero-actions">
+    <button class="btn-primary" onclick="document.getElementById(&#39;offer&#39;).scrollIntoView({behavior:&#39;smooth&#39;})">
+      Claim free consultation →
+    </button>
+    <button class="btn-ghost" onclick="document.getElementById(&#39;how&#39;).scrollIntoView({behavior:&#39;smooth&#39;})">
+      See how it works
+    </button>
+  </div>
+
+  <div class="hero-scroll">
+    <div class="hero-scroll-bar"></div>
+    <span>scroll</span>
+  </div>
+</section>
+
+<!-- STATS -->
+<div class="stats">
+  <div class="stat reveal show"><div class="stat-n">100%</div><div class="stat-l">Australian owned &amp; operated</div></div>
+  <div class="stat reveal reveal-d1 show"><div class="stat-n">Global</div><div class="stat-l">Providers used to keep costs low</div></div>
+  <div class="stat reveal reveal-d2 show"><div class="stat-n">25+</div><div class="stat-l">Digital services under one roof</div></div>
+  <div class="stat reveal reveal-d3 show"><div class="stat-n">1</div><div class="stat-l">Point of contact for everything</div></div>
+</div>
+
+<!-- HOW IT WORKS -->
+<section class="section how" id="how">
+  <div class="inner">
+    <div class="how-header reveal show">
+      <div class="tag">How it works</div>
+      <h2 class="sh">Three steps from <em>brief to delivered</em></h2>
+      <p class="sb">We sit between you and affordable global providers — managing every project so you get the result, not the headache. Every quote is custom-built around the features you actually want.</p>
+    </div>
+    <div class="how-steps">
+      <div class="how-step reveal show">
+        <div class="step-num">01</div>
+        <div class="step-line"></div>
+        <h3>You brief us</h3>
+        <p>Tell us what you need. We hold a free consultation to understand your goals, timeline, and desired features in detail — because no two projects are the same, and we don’t treat them that way.</p>
+      </div>
+      <div class="how-step reveal reveal-d1 show">
+        <div class="step-num">02</div>
+        <div class="step-line"></div>
+        <h3>We scope &amp; quote</h3>
+        <p>We prepare a detailed written scope and a custom quote based on your specific requirements. Pricing reflects the features you choose — you decide what fits your budget before committing to a cent.</p>
+      </div>
+      <div class="how-step reveal reveal-d2 show">
+        <div class="step-num">03</div>
+        <div class="step-line"></div>
+        <h3>We manage &amp; deliver</h3>
+        <p>We engage our global network of skilled providers, manage the full project — briefing, QA, revisions — and hand you polished deliverables. Annual maintenance plans keep your assets in top shape long-term.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PHOTO BANNER 1 -->
+<div class="photo-banner reveal show">
+  <div class="photo-banner-img" style="background-image:url(&#39;https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1600&amp;q=80&amp;auto=format&amp;fit=crop&#39;)"></div>
+  <div class="photo-banner-overlay">
+    <div class="photo-banner-text">
+      <h2>Global talent.<br><em>Local management.</em></h2>
+      <p>We combine the cost advantages of skilled global providers with the accountability of an Australian business you can actually talk to.</p>
+    </div>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section class="section" id="services" style="background:var(--ink)">
+  <div class="inner">
+    <div class="reveal show">
+      <div class="tag">What we deliver</div>
+      <h2 class="sh">25+ services. <em>One team.</em></h2>
+      <p class="sb" style="margin-bottom:0">From full website builds to brand identity to print collateral — all sourced from skilled global providers and managed end-to-end by Avyra, at a fraction of local agency rates.</p>
+    </div>
+    <div class="bento">
+
+      <!-- 1. WEBSITE CREATION — first, wide -->
+      <div class="bento-cell wide reveal show">
+        <div class="cell-icon">🌐</div>
+        <h3>Website Creation &amp; Development</h3>
+        <p>Full website builds from landing pages and microsites through to multi-page corporate sites. We design, develop, and deliver — responsive, fast, and ready for you to manage via CMS. WordPress and Shopify integration included.</p>
+        <div class="cell-tags">
+          <span class="cell-tag">Landing pages</span><span class="cell-tag">Microsites</span><span class="cell-tag">Multi-page websites</span><span class="cell-tag">WordPress</span><span class="cell-tag">Shopify</span><span class="cell-tag">Home page panels</span>
+        </div>
+      </div>
+
+      <!-- 2. Branding -->
+      <div class="bento-cell reveal reveal-d2 show">
+        <div class="cell-icon">⭐</div>
+        <h3>Branding &amp; Visual Identity</h3>
+        <p>Logos, visual mnemonics, and complete identity systems that make your business instantly recognisable. Built to last.</p>
+        <div class="cell-tags">
+          <span class="cell-tag">Logo design</span><span class="cell-tag">Brand systems</span><span class="cell-tag">Visual identity</span><span class="cell-tag">App &amp; Play Store icons</span><span class="cell-tag">Logo resizes</span>
+        </div>
+      </div>
+
+      <!-- 3. SEO -->
+      <div class="bento-cell reveal show">
+        <div class="cell-icon">🔍</div>
+        <h3>Search Engine Optimisation</h3>
+        <p>Technical and on-page SEO strategies that drive organic traffic and put your business in front of people already searching for you.</p>
+        <div class="cell-tags">
+          <span class="cell-tag">On-page SEO</span><span class="cell-tag">Technical SEO</span>
+        </div>
+      </div>
+
+      <!-- 4. Print — wide -->
+      <div class="bento-cell wide reveal reveal-d1 show">
+        <div class="cell-icon">🖨</div>
+        <h3>Print &amp; Marketing Collateral</h3>
+        <p>Everything your business needs to show up professionally in the physical world — from brochures and posters to large-format standees, retail displays, and event materials.</p>
+        <div class="cell-tags">
+          <span class="cell-tag">Brochures</span><span class="cell-tag">Printable brochures</span><span class="cell-tag">Posters</span><span class="cell-tag">Flyers</span><span class="cell-tag">Roll-up banners</span><span class="cell-tag">Tent cards</span><span class="cell-tag">Wobblers</span><span class="cell-tag">Stickers</span><span class="cell-tag">Cash till stickers</span><span class="cell-tag">Hard standee 6ft×2ft</span><span class="cell-tag">QRP banners</span><span class="cell-tag">Panel creation</span><span class="cell-tag">Hanger PDFs</span>
+        </div>
+      </div>
+
+      <!-- 5. PDF -->
+      <div class="bento-cell reveal show">
+        <div class="cell-icon">📄</div>
+        <h3>PDF &amp; Document Design</h3>
+        <p>Professional PDF creation, revision, and conversion — plus certificates, application forms, and PPT presentation sliders.</p>
+        <div class="cell-tags">
+          <span class="cell-tag">PDF creation</span><span class="cell-tag">Certificates</span><span class="cell-tag">Application forms</span><span class="cell-tag">PPT sliders</span>
+        </div>
+      </div>
+
+      <!-- 6. Video -->
+      <div class="bento-cell reveal reveal-d1 show">
+        <div class="cell-icon">🎬</div>
+        <h3>Video Creation &amp; Revision</h3>
+        <p>Product videos, brand videos, and social content — created and revised to your brief by skilled creators at a price that makes sense.</p>
+        <div class="cell-tags">
+          <span class="cell-tag">Video creation</span><span class="cell-tag">Video revision</span><span class="cell-tag">Social content</span>
+        </div>
+      </div>
+
+      <!-- 7. Maintenance -->
+      <div class="bento-cell reveal reveal-d2 show">
+        <div class="cell-icon">🔧</div>
+        <h3>Annual Maintenance Plans</h3>
+        <p>Websites and digital assets need ongoing care. Our maintenance plans keep your site updated, secure, and performing — with Avyra as your trusted ongoing partner.</p>
+        <div class="cell-tags">
+          <span class="cell-tag">Site updates</span><span class="cell-tag">Security patches</span><span class="cell-tag">Ongoing support</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- PHOTO SPLIT — Why intro -->
+<section class="section" style="background:var(--ink2);padding:4rem 2.5rem" id="why">
+  <div class="inner">
+    <div class="photo-split reveal show">
+      <div class="photo-split-img" style="background-image:url(&#39;https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=900&amp;q=80&amp;auto=format&amp;fit=crop&#39;)"></div>
+      <div class="photo-split-content">
+        <div class="tag">Why Avyra</div>
+        <h2 class="sh">One contact.<br><em>Better value.</em></h2>
+        <p class="sb">By sourcing work from skilled global providers, we pass those cost savings directly to you — without you having to navigate the complexity of working with overseas teams yourself.</p>
+        <button class="btn-primary" onclick="document.getElementById(&#39;offer&#39;).scrollIntoView({behavior:&#39;smooth&#39;})">Book free consult →</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY FEATURES -->
+<section class="section why" style="padding-top:2rem">
+  <div class="inner">
+    <div class="why-inner">
+      <div class="why-panel reveal show">
+        <div class="why-panel-glow"></div>
+        <svg width="100%" height="100%" viewBox="0 0 360 360" fill="none" style="position:absolute;inset:0">
+          <line x1="108" y1="128" x2="168" y2="175" stroke="rgba(29,158,117,0.2)" stroke-width="1" stroke-dasharray="5 5"></line>
+          <line x1="192" y1="200" x2="255" y2="250" stroke="rgba(29,158,117,0.15)" stroke-width="1" stroke-dasharray="5 5"></line>
+          <rect x="20" y="90" width="116" height="76" rx="12" fill="rgba(8,80,65,0.4)" stroke="rgba(29,158,117,0.25)" stroke-width="1"></rect>
+          <text x="78" y="122" fill="#5DCAA5" font-size="9" text-anchor="middle" font-family="Geist,sans-serif" font-weight="600" letter-spacing="1.5">YOUR</text>
+          <text x="78" y="136" fill="#5DCAA5" font-size="9" text-anchor="middle" font-family="Geist,sans-serif" font-weight="600" letter-spacing="1.5">BUSINESS</text>
+          <text x="78" y="150" fill="rgba(138,171,151,0.55)" font-size="7.5" text-anchor="middle" font-family="Geist,sans-serif">NSW, Australia</text>
+          <rect x="115" y="155" width="130" height="82" rx="14" fill="rgba(29,158,117,0.14)" stroke="rgba(29,158,117,0.45)" stroke-width="1.5"></rect>
+          <text x="180" y="187" fill="#5DCAA5" font-size="11.5" text-anchor="middle" font-family="Geist,sans-serif" font-weight="700" letter-spacing="2">AVYRA</text>
+          <text x="180" y="202" fill="rgba(138,171,151,0.8)" font-size="8" text-anchor="middle" font-family="Geist,sans-serif" letter-spacing="1">DIGITAL</text>
+          <text x="180" y="218" fill="rgba(138,171,151,0.5)" font-size="7" text-anchor="middle" font-family="Geist,sans-serif">Your intermediary</text>
+          <rect x="224" y="218" width="116" height="76" rx="12" fill="rgba(4,52,44,0.5)" stroke="rgba(29,158,117,0.18)" stroke-width="1"></rect>
+          <text x="282" y="248" fill="rgba(138,171,151,0.85)" font-size="9" text-anchor="middle" font-family="Geist,sans-serif" font-weight="600" letter-spacing="1">GLOBAL</text>
+          <text x="282" y="262" fill="rgba(138,171,151,0.85)" font-size="9" text-anchor="middle" font-family="Geist,sans-serif" font-weight="600" letter-spacing="1">PROVIDERS</text>
+          <text x="282" y="276" fill="rgba(138,171,151,0.5)" font-size="7.5" text-anchor="middle" font-family="Geist,sans-serif">Lower cost, same quality</text>
+          <circle cx="180" cy="196" r="68" stroke="rgba(29,158,117,0.07)" stroke-width="1" fill="none"></circle>
+          <circle cx="180" cy="196" r="90" stroke="rgba(29,158,117,0.04)" stroke-width="1" fill="none"></circle>
+        </svg>
+      </div>
+      <div>
+        <div class="why-features">
+          <div class="wf reveal show">
+            <div class="wf-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg></div>
+            <div>
+              <h4>Cheaper than local agencies</h4>
+              <p>By sourcing from skilled global providers, we pass cost savings directly to you — high-quality output without the local agency price tag.</p>
+            </div>
+          </div>
+          <div class="wf reveal reveal-d1 show">
+            <div class="wf-icon"><svg viewBox="0 0 24 24"><rect x="1" y="4" width="22" height="16" rx="2"></rect><line x1="1" y1="10" x2="23" y2="10"></line></svg></div>
+            <div>
+              <h4>Transparent, custom quoting</h4>
+              <p>Every quote is written and tailored to the features you want. You choose what’s included before you commit to anything.</p>
+            </div>
+          </div>
+          <div class="wf reveal reveal-d2 show">
+            <div class="wf-icon"><svg viewBox="0 0 24 24"><polyline points="17 21 17 13 7 13 7 21"></polyline><polyline points="1 21 23 21"></polyline><line x1="12" y1="3" x2="12" y2="13"></line></svg></div>
+            <div>
+              <h4>Your ongoing digital partner</h4>
+              <p>Our annual maintenance plans mean Avyra stays your trusted partner long after launch — keeping assets secure, updated, and performing.</p>
+            </div>
+          </div>
+          <div class="wf reveal reveal-d3 show">
+            <div class="wf-icon"><svg viewBox="0 0 24 24"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg></div>
+            <div>
+              <h4>End-to-end managed for you</h4>
+              <p>From brief to final files — we manage all provider communication, QA, and revisions. You review and approve. That’s it.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PHOTO BANNER 2 -->
+<div class="photo-banner reveal show">
+  <div class="photo-banner-img" style="background-image:url(&#39;https://images.unsplash.com/photo-1553484771-047a44eee27b?w=1600&amp;q=80&amp;auto=format&amp;fit=crop&#39;)"></div>
+  <div class="photo-banner-overlay" style="justify-content:flex-end">
+    <div class="photo-banner-text" style="text-align:right">
+      <h2>Every project starts with<br><em>a free conversation.</em></h2>
+      <p>No obligation, no sales pitch — just an honest discussion about what you need and how we can deliver it affordably.</p>
+    </div>
+  </div>
+</div>
+
+<!-- FREE CONSULT OFFER -->
+<section class="offer" id="offer">
+  <div class="offer-glow-l"></div>
+  <div class="offer-glow-r"></div>
+  <div class="offer-card reveal show">
+    <div class="offer-badge">
+      <span>🎯</span>
+      <span>Available to every client — no exceptions</span>
+    </div>
+    <h2 class="sh">Start with a <em>free consultation</em></h2>
+    <p class="sb">We’re a new business and we want to earn your trust the right way — with a genuine conversation, not a sales pitch. Every client starts with a free strategy session, no commitment required.</p>
+    <div class="offer-highlight">
+      <div class="offer-highlight-bar"></div>
+      <p>Book a <strong>free 45-minute consultation</strong> with us. We’ll listen to what you need, walk you through how we’d approach it, and give you an honest picture of scope, timeline, and cost — all in writing, with <strong>zero obligation to proceed</strong>.</p>
+    </div>
+    <div class="offer-perks">
+      <div class="offer-perk reveal show">
+        <div class="perk-icon">⏱</div>
+        <div class="perk-title">45-min session</div>
+        <div class="perk-sub">Free strategy conversation, zero pressure</div>
+      </div>
+      <div class="offer-perk reveal reveal-d1 show">
+        <div class="perk-icon">📋</div>
+        <div class="perk-title">Written scope</div>
+        <div class="perk-sub">Custom quote based on the features you choose</div>
+      </div>
+      <div class="offer-perk reveal reveal-d2 show">
+        <div class="perk-icon">🔒</div>
+        <div class="perk-title">Zero commitment</div>
+        <div class="perk-sub">Walk away after the consult — no questions asked</div>
+      </div>
+    </div>
+    <button class="btn-primary" style="font-size:.95rem;padding:.9rem 2.25rem" onclick="document.getElementById(&#39;contact&#39;).scrollIntoView({behavior:&#39;smooth&#39;})">
+      Book your free consultation →
+    </button>
+    <p class="offer-note">Fill in the contact form below and we’ll respond within 48 hours to confirm your session.</p>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="section" id="contact" style="background:var(--ink2)">
+  <div class="inner">
+    <div class="contact-inner">
+      <div>
+        <div class="tag reveal show">Get in touch</div>
+        <h2 class="sh reveal show">Let’s talk about<br><em>your project</em></h2>
+        <p class="sb reveal show">Fill in the form and we’ll respond within 48 hours to arrange your free consultation and put together a tailored scope.</p>
+        <div class="contact-details">
+          <div class="cd reveal show">
+            <div class="cd-icon">📧</div>
+            <div><h4>Email us directly</h4><p><a href="mailto:digitalavyra@gmail.com">digitalavyra@gmail.com</a></p></div>
+          </div>
+          <div class="cd reveal reveal-d1 show">
+            <div class="cd-icon">📍</div>
+            <div><h4>Based in</h4><p>New South Wales, Australia</p></div>
+          </div>
+          <div class="cd reveal reveal-d2 show">
+            <div class="cd-icon">⚡</div>
+            <div><h4>Response time</h4><p>Within 48 hours on all enquiries</p></div>
+          </div>
+          <div class="cd reveal reveal-d3 show">
+            <div class="cd-icon">🎯</div>
+            <div><h4>Free consultation</h4><p>Included for every client — book yours today</p></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-wrap reveal show" id="form-wrap">
+        <div class="form-grid">
+          <div class="form-row">
+            <div class="fg">
+              <label>Full name *</label>
+              <input type="text" id="f-name" placeholder="Jane Smith" required="">
+            </div>
+            <div class="fg">
+              <label>Email *</label>
+              <input type="email" id="f-email" placeholder="jane@company.com" required="">
+            </div>
+          </div>
+          <div class="fg">
+            <label>Company / Business</label>
+            <input type="text" id="f-company" placeholder="Acme Pty Ltd">
+          </div>
+          <div class="fg">
+            <label>Tell us about your project *</label>
+            <textarea id="f-message" placeholder="What do you need? What&#39;s your timeline? Any budget in mind?" required=""></textarea>
+          </div>
+          <div class="fg">
+            <label>Your availability next week *</label>
+            <textarea id="f-availability" placeholder="List 3–5 times in the following week when you are free to meet, e.g.
+• Monday 9am–11am
+• Wednesday 2pm–4pm
+• Friday anytime after 1pm" style="min-height:115px" required=""></textarea>
+            <div class="form-hint">📅&nbsp; We’ll confirm one of your times within 48 hours. Sessions are 45 minutes via video call.</div>
+          </div>
+          <button class="form-submit" id="submit-btn" type="button" onclick="submitForm()">
+            <span id="btn-text">Send enquiry &amp; book free consult →</span>
+            <div class="spinner" id="btn-spinner"></div>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-left">
+    <svg width="26" height="26" viewBox="0 0 100 100" fill="none">
+      <path d="M18 82 L46 22 L50 22 L22 82 Z" fill="#085041"></path>
+      <path d="M82 82 L54 22 L50 22 L78 82 Z" fill="#1D9E75"></path>
+      <rect x="14" y="80" width="72" height="3.5" rx="1.75" fill="#1D9E75"></rect>
+    </svg>
+    <span class="footer-copy">© 2025 <span>Avyra Digital</span>. All rights reserved. NSW, Australia.</span>
+  </div>
+  <div class="footer-links">
+    <a href="#how">How it works</a>
+    <a href="#services">Services</a>
+    <a href="#why">Why us</a>
+    <a href="#offer">Free consult</a>
+    <a href="mailto:digitalavyra@gmail.com">digitalavyra@gmail.com</a>
+  </div>
+</footer>
+
+<script>
+/* NAV */
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 40));
+
+/* REVEAL ON SCROLL */
+const observer = new IntersectionObserver(
+  entries => entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('show'); }),
+  { threshold: 0.12 }
+);
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+/* EMAILJS */
+emailjs.init({ publicKey: '_r46d8CN3lLMsEmBu' });
+
+async function submitForm() {
+  const name  = document.getElementById('f-name').value.trim();
+  const email = document.getElementById('f-email').value.trim();
+  const co    = document.getElementById('f-company').value.trim();
+  const msg   = document.getElementById('f-message').value.trim();
+  const avail = document.getElementById('f-availability').value.trim();
+
+  if (!name || !email || !msg || !avail) {
+    alert('Please fill in all required fields, including your availability for next week.');
+    return;
+  }
+
+  const btn  = document.getElementById('submit-btn');
+  const text = document.getElementById('btn-text');
+  const spin = document.getElementById('btn-spinner');
+  btn.disabled = true;
+  text.style.display = 'none';
+  spin.style.display = 'block';
+
+  try {
+    await emailjs.send('service_yr5ygin', 'template_gyfq5zn', {
+      from_name:    name,
+      from_email:   email,
+      company:      co || 'Not provided',
+      message:      msg,
+      availability: avail,
+      reply_to:     email,
+    });
+
+    document.getElementById('form-wrap').innerHTML = `
+      <div class="form-success">
+        <div class="form-success-icon">&#x2713;</div>
+        <h3>Enquiry received!</h3>
+        <p>Thanks ${name} &mdash; we have received your message and your availability for next week.<br><br>
+        We will be in touch within <strong style="color:var(--tl)">48 hours</strong> to confirm your free consultation time.<br><br>
+        You can also reach us at <a href="mailto:digitalavyra@gmail.com" style="color:var(--tl)">digitalavyra@gmail.com</a>.</p>
+      </div>`;
+
+  } catch (err) {
+    btn.disabled = false;
+    text.style.display = 'block';
+    spin.style.display = 'none';
+    alert('Something went wrong. Please email us directly at digitalavyra@gmail.com');
+    console.error('EmailJS error:', err);
+  }
+}
+</script>
+
+</body></html>
